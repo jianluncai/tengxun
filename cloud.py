@@ -10,9 +10,9 @@ engine = Engine(get_wsgi_application())
 @engine.define
 def hello(**params):
     if 'name' in params:
-        return 'Hello, {}!'.format(params['name'])
+        print('Hello, {}!'.format(params['name']))
     else:
-        return 'Hello, LeanCloud!'
+        print('Hello, LeanCloud!')
 
 
 @engine.before_save('Todo')

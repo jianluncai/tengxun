@@ -13,7 +13,10 @@ def hello(**params):
         print('Hello, {}!'.format(params['name']))
     else:
         print('Hello, LeanCloud!')
-
+        
+@engine.define
+def shuchu(**params):
+    print('Hello, allun!')
 
 @engine.before_save('Todo')
 def before_todo_save(todo):
